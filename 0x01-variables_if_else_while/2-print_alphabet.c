@@ -1,25 +1,18 @@
-
 #include <stdio.h>
+
 /**
- * main - Entry point
+ * main - Prints the alphabetic
  *
- * Return: Always 0 (Success)
+ * Return: Always (Success)
  */
 int main(void)
 {
-    int num;
-    num = 97;
-    while (num <= 122)
-        putchar(num);
-    num++;
-    int p;
-    p = 97;
-    while (p <= 122)
-    {
-        putchar(p);
-        p++;
-    }
-    putchar('\n');
-    return (0);
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+
+	putchar('\n');
+	return (0);
 }
 
