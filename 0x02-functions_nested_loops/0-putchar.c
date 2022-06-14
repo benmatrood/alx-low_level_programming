@@ -1,20 +1,20 @@
 #include "main.h"
-
 /**
- * main - Print "Holbertone"
+ *main - entry point
  *
- * Return: Always 0 (Success)
+ *Description: prints Holberton followed by a newline
+ *
+ *Return: returns 0(successful)
+ *
  */
-
 int main(void)
 {
-	int i = 0;
-	char name_of_school[] = "Holbertone";
+	char holbText[9] = "Holberton";
+	int i;
 
-	while (i < 9)
+	for (i = 0; i < 9; i++)
 	{
-		_putchar(name_of_school[i]);
-		i++;
+		_putchar(holbText[i]);
 	}
 	_putchar('\n');
 	return (0);
