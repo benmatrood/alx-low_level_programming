@@ -9,9 +9,9 @@
 int main(void)
 {
 	int i = 0;
-	char name_of_school[] = "Main";
+	char name_of_school[] = "Holberton";
 
-	while (i < 9)
+	while (i < 4)
 	{
 		_putchar(name_of_school[i]);
 		i++;
