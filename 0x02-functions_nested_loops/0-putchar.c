@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Print "Holberton"
+ * main - Print "Holbertone"
  *
  * Return: Always 0 (Success)
  */
@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i = 0;
-	char name_of_school[] = "Holberton";
+	char name_of_school[] = "Holbertone";
 
 	while (i < 9)
 	{
