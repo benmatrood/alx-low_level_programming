@@ -1,32 +1,42 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_square - Prints n square according n number of times
+ * main - Prints a Fizz Buzz program
  *
- * @size: The number of squares/number of times
- *
- * Return: void
+ * Return: Always 0 (Success)
  */
 
-void print_square(int size)
+int main(void)
 {
-	int a, b;
+	int a;
 
-	if (size <= 0)
+	for (a = 1; a <= 100; a++)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (a = 0; a < size; a++)
+		if ((a % 3 == 0) && (a % 5 == 0))
 		{
-			for (b = 0; b < size; b++)
-			{
-				_putchar(35);
-			}
+			printf("FizzBuzz");
+		}
+		else if (a % 3 == 0)
+		{
+			printf("Fizz");
+		}
+		else if (a % 5 == 0)
+		{
+			printf("Buzz");
+		}
+		else
+		{
+			printf("%d", a);
+		}
 
-			_putchar('\n');
+		if (a != 100)
+		{
+			printf(" ");
 		}
 	}
 
+	printf("\n");
+
+	return (0);
 }
