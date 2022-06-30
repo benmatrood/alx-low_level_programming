@@ -1,20 +1,21 @@
-
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 
 /**
- * *malloc_checked - allocate memory with malloc
- * @b: unsigned int type
- * Return: return pointer
+ * *create_array - creates an array of chars,
+ * and initializes it with a specific char.
+ * @size: size of the array
+ * @c: char to initialize
+ * Return: pointer to the array initialized or NULL
  */
-void *malloc_checked(unsigned int b)
-{
-	int *ptr;
 
-	ptr = malloc(b);
-	if (ptr == NULL)
-		exit(98);
-	return (ptr);
+char *create_array(unsigned int size, char c)
+{
+char *m = malloc(size);
+if (size == 0 || m == 0)
+	return (0);
+
+while (size--)
+	m[size] = c;
+
+return (m);
 }
