@@ -1,36 +1,21 @@
-/*
- * Auth: Brennan D Baraban
- * File: 0-binary_to_uint.c
- */
-
-#include "holberton.h"
+#include "lists.h"
 
 /**
- * binary_to_uint - Converts a binary number to an unsigned int.
- * @b: A pointer to a string of 0 and 1 chars.
- *
- * Return: If b is NULL or contains chars not 0 or 1 - 0.
- *         Otherwise - the converted number.
- */
-unsigned int binary_to_uint(const char *b)
+ * print_listint - prints all the elements of a listint_t list.
+ * @h: pointer to the list.
+ * Return: number of nodes.
+ **/
+size_t print_listint(const listint_t *h)
 {
-	unsigned int num = 0, mult = 1;
-	int len;
+	const listint_t *node = h;
+	size_t cont = 0;
 
-	if (b == '\0')
-		return (0);
-
-	for (len = 0; b[len];)
-		len++;
-
-	for (len -= 1; len >= 0; len--)
+	while (node)
 	{
-		if (b[len] != '0' && b[len] != '1')
-			return (0);
-
-		num += (b[len] - '0') * mult;
-		mult *= 2;
+		printf("%i\n", node->n);
+		cont++;
+		node = node->next;
 	}
 
-	return (num);
+	return (cont);
 }
